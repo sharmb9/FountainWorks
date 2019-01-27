@@ -59,7 +59,7 @@
           <h1 class="text-uppercase text-secondary mb-0 text-left">Search:</h1>
           <div class="conrandom">
           <!-- <form action="/action_page.php"> -->
-          <form >
+          <form method="GET">
             <p>Building name: 
               <select name="Building name">
                 <option value="BSB">BSB</option>
@@ -75,6 +75,9 @@
                 <option value="4">4</option>
               </select>
             </p>
+            Fountain ID:<br />
+            <input type="text" name="FountainID" value="" /><br><br>
+
             <input class="btn btn-primary btn-lg" type="submit" onclick="submitQuery(); return false;">
           </form>
         </div> 
