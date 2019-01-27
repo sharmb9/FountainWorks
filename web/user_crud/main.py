@@ -37,7 +37,7 @@ def add_user():
 		
 @app.route('/')
 def users():
-	#try:
+	try:
 		conn = mysql.connect()
 		cursor = conn.cursor(pymysql.cursors.DictCursor)
 		cursor.execute("SELECT * FROM fountainInfo")
@@ -45,13 +45,14 @@ def users():
 		table = Results(rows)
 		table.border = True
 		return render_template('users.html', table=table)
+		#cursor.close() 
+		#conn.close()
+	except Exception as e:
+		print(e)
+	finally:
 		cursor.close() 
 		conn.close()
-	# except Exception as e:
-		# print(e)
-	# finally:
-		# cursor.close() 
-		# conn.close()
+
 
 @app.route('/edit/<int:id>')
 def edit_view(id): #change param to fountain id?
