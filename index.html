@@ -13,7 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="vendor/bootstrap/css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,14 +26,20 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 
+    <!-- Importing JavaScript File-->
+    <script type="text/javascript" src="script.js"></script>
+
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase " id="mainNav">
+        <!-- <a class="navbar-brand js-scroll-trigger text-center" href="#page-top">Fountain Works</a> -->
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger text-center" href="#page-top">FountainWorks</a>
+       <div> 
+          <a class="navbar-brand js-scroll-trigger  href="#page-top">Fountain-Works</a>
+       </div>
       </div>
     </nav>
 
@@ -41,101 +47,72 @@
     <br>
     <br>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Form Grid Section -->
     <section class="portfolio" id="portfolio">
+     
       <div class="container">
-        <h3 class="text-uppercase text-secondary mb-0 text-left">Search:</h3>
+        <!-- <h3 class="text-uppercase text-secondary mb-0 text-left">Search:</h3> -->
         <div class="row">
           <!-- add forms here -->
           
-          <div>
-
-          <form action="/action_page.php">
-            <p>Buikding name
-            <select name="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-          </p>
-
-            <br><br>
-            <input type="submit">
+          <div >
+          <h1 class="text-uppercase text-secondary mb-0 text-left">Search:</h1>
+          <div class="conrandom">
+          <!-- <form action="/action_page.php"> -->
+          <form >
+            <p>Building name: 
+              <select name="Building name">
+                <option value="BSB">BSB</option>
+                <option value="JHE">JHE</option>
+                <option value="Thode">Thode</option>
+              </select>
+            </p>
+            <p>Floor #: 
+              <select name="Floor #">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </p>
+            <input class="btn btn-primary btn-lg" type="submit" onclick="submitQuery(); return false;">
           </form>
+        </div> 
+        <br>
+        <div class="container">
+            <div class="row">
+            <div>
+                <h1 class="text-uppercase text-left text-secondary">Status:</h1>
+                <h3 class="text-primary text-uppercase" id="result">Working</h3>
+            </div> 
+            </div>
+          </div>
 
         </div>
       </div>
     </div>
     </section>
 
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h4 class="text-uppercase text-left text-white">About</h4>
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
+    <!-- Status Section
+    <section class=" text-secondary mb-0" id="about">
+   
+    </section> -->
     <!-- Footer -->
+
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-          </div>
+          <form action="secondPage.html"> 
+          <button class="btn btn-primary btn-xl">Click to Change Status</button>
+          </form> 
         </div>
       </div>
     </footer>
+    
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2018</small>
+        <small>DeltaHacks 5 - Raj, Prithvi Hamza & Bilaval</small>
       </div>
     </div>
 
@@ -145,6 +122,7 @@
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
+   
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
