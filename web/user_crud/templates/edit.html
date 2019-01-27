@@ -1,0 +1,23 @@
+<doctype html>
+<title>Edit User - Python Flask MySQL CRUD</title>
+<h2>Edit User</h2>
+<form method="post" action="/update">
+    <dl>
+		<p>
+			<input name="inputBuilding" value="{{ row['fountain_id'] }}" type="text" placeholder="Building Name" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputFloorNum" value="{{ row['floor_num'] }}" type="text" placeholder="Floor Number" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputStatus" value="{{ row['status'] }}" type="text" placeholder="Status" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputID" value="" type="text" placeholder="Fountain ID" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input name="id" value="{{ row['user_id'] }}" type="hidden">
+		<input type="submit" value="Submit">
+	</p>
+</form>
